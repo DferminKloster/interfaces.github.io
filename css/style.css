@@ -1,0 +1,14 @@
+header{
+    
+    background: #070F2F;
+}
+
+
+body{
+     background-color: #070F2F;
+}
+
+footer{
+    display: flex;
+    background-color: red;
+}
