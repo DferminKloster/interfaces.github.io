@@ -7,14 +7,17 @@ header{
     background: #070F2F;
 }
 
-
+.nav{
+    display: flex;
+    justify-content: center;
+}
 
 body {
 	margin: 0;
 	padding: 0;
 	font-family: Helvetica, Arial, sans-serif;
 	color: #666;
-	background: #070F2F; 
+	background: #16204A; 
 	font-size: 1em;
 	line-height: 1.5em;
 }
