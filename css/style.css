@@ -1,14 +1,32 @@
 header{
     position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
     width: 100%;
-    height: 100px;
+    height: 50px;
     left: 0px;
     top: 0px;
     background: #070F2F;
 }
 
-.nav{
+.logo{
     display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+     margin: 10px;
+}
+
+nav a{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav{
     justify-content: center;
 }
 
@@ -21,26 +39,10 @@ body {
 	font-size: 1em;
 	line-height: 1.5em;
 }
-nav {
-	float: right;
-}
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    padding-right: 20px;
-}
-nav ul li {
-    display: inline-block;
-    line-height: 80px;
-}
-    
-nav ul li a {
-    display: block;
-    padding: 0 10px;
-    text-decoration: none;
-}
+.conteiner
+
+
 
 footer{
     height: 50px;
