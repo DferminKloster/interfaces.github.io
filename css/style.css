@@ -69,7 +69,7 @@ body {
 }
 
 .activeline1__barra_menu{
-    transform: rotate(45deg) translate(-2px, 1px);
+    transform: rotate(45deg) translate(-1px, 1px);
 }
 
 .activeline2__barra_menu{
@@ -78,7 +78,7 @@ body {
 }
 
 .activeline3__barra_menu{
-    transform: rotate(-45deg) translate(-3px,2px);
+    transform: rotate(-45deg) translate(2px,2px);
 }
 
 #slogan {
@@ -88,6 +88,13 @@ body {
     background-image: url(../assets/img/Background_slogan.png);
     background-size: cover;
 }
+
+.contenedor{
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+}
+
 
 footer{
     height: 50px;
