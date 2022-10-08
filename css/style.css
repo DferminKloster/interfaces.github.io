@@ -40,6 +40,17 @@ nav a{
     justify-content: center;
 }
 
+.nav input {
+    background-color: #616A93;
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 20px;
+    border: none;
+    height: 30px;
+    width: 500px;
+    border-radius: 10px;
+}
+
 
 .barra_menu{
     margin: 0px 20px 0px 20px;
@@ -94,22 +105,25 @@ nav a{
 #slogan h2 {
     color: #EC9409;
     text-transform: capitalize;
+    line-height: normal;
     text-align: left;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 65px;
 
     position: absolute;
     margin: 0;
     height: 50%;
-    width: 50%;
+    width: 45%;
     left: 3%;
-    top: 40%;
+    top: 20%;
 }
 
 #slogan img {
     position: absolute;
-    right: 3%;
-    top: 10%;
+    width: 260px;
+    height: 260px;
+    right: 10%;
+    top: 15%;
 }
 
 .contenedor{
