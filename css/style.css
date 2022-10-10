@@ -24,6 +24,7 @@ header{
     display: flex;
     align-items: center;
     text-align: center;
+    margin-left: 10px;
 }
 
 .logo img{
@@ -31,14 +32,9 @@ header{
     width: 55px;
 }
 
-
-nav a{
-    height: 50px;
-    margin-right: 10px;
-}
-
-.nav{
-    justify-content: center;
+.nav {
+    display: flex;
+    align-items: center;
 }
 
 .nav input {
@@ -50,8 +46,14 @@ nav a{
     height: 30px;
     width: 500px;
     border-radius: 10px;
+    margin-right: 10px;
 }
 
+.nav img {
+    height: 30px;
+    width: 35px;
+    cursor: pointer;
+}
 
 .barra_menu{
     margin: 0px 20px 0px 20px;
@@ -115,8 +117,7 @@ nav a{
 
     position: absolute;
     margin: 0;
-    height: 50%;
-    width: 45%;
+    width: 50%;
     left: 3%;
     top: 20%;
 }
@@ -131,21 +132,34 @@ nav a{
 
 .perfil{
     display: flex;
-    margin: 10px;
+    margin: 10px 20px 10px 10px;
     align-items: center;
     justify-content: center;
+    flex-direction: row;
+}
+
+.perfil img {
+    height: 30px;
+    width: 35px;
 }
 
 .perfil button{
-    height: 39px;
-    width: 90px;
-    margin: 10px;
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
     border-radius: 10px;
+    border: none;
     background-color: #EC9409;
+    cursor: pointer;
+
 }
-.perfil a{
+
+.perfil button a {
+    font-size: larger;
+    font-weight: bolder;
     text-transform: capitalize;
     color: #FFFFFF;
+    text-decoration: none;
 }
 
 .contenedor{
