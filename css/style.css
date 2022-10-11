@@ -236,14 +236,9 @@ section h1 {
     text-decoration: none;
 }
 
+/* no hagas estas porongas fermín. No generalices tanto... intentá sacar esto */
 h3{
     width: 118px;
-}
-
-a{
-    text-transform: uppercase;
-    color: #fff;
-    text-decoration: none;
 }
 
 .btn{
@@ -323,7 +318,48 @@ a{
     width: 100%;
 }
 
+/* QUITAR LUEGO DE PRUEBAS CON EL FOOTER */
+.games_menu {
+    min-width: 3000px
+}
+
 footer{
-    height: 50px;
-    background-color: red;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 96%;
+    padding: 0% 2% 0% 2%;
+    height: 200px;
+    background-color: #070F2F;
+    color: #EC9409;
+}
+
+.footer_div {
+    display: flex;
+    padding: 0px 10px 0px 10px;
+    flex-direction: column;
+    border: 3px dotted #EC9409;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.footer_div h3 {
+    margin: 20px 0px 10px 0px;
+    font-weight: bold;
+    font-size: 30px;
+    width: 250px;
+}
+
+.one {
+    width: 20%;
+}
+
+.one div img {
+    width: 30px;
+    height: 30px;
+}
+
+.two {
+    width: 35%;
 }
