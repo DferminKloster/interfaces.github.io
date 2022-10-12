@@ -12,6 +12,100 @@ body{
     background-color: #293462;
 }
 
+.logocarga{
+    display: flex;
+}
+
+.logocarga img{
+    position: relative;
+    top: 6.8em;
+    left: 37.2em;
+    width: 10em;
+}
+
+.contenedor-carga {
+    background-color: rgba(250, 240, 245, 0.9);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    transition: all 1s ease;
+    z-index: 10000;
+    visibility: visible;
+}
+
+.contenedor-carga-hidden {
+    visibility: hidden;
+}
+
+.carga {
+    border: 8px solid #ccc;
+    border-top-color: #616A93;
+    height: 70px;
+    width: 70px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    animation: girar 1.5s linear infinite;
+}
+
+.porcentaje {
+    position: absolute;
+    height: 17px;
+    width: 23px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.porcentaje p {
+    color: #070F2F;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scaleup {
+    0% {
+        transform: scale(1.4)
+    }
+
+    50% {
+        transform: skewX(-5deg);
+    }
+
+    100% {
+        transform: skewX(5deg);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+
 header{
     display: flex;
     justify-content: space-between;
