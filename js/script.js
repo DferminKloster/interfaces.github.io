@@ -39,7 +39,7 @@ function calcularPorcentajeCarga() {
         setTimeout(() => {
             clearInterval(intervalo);
             contenedorCarga.classList.toggle("contenedor-carga-hidden");
-        }, 5000);
+        }, 0);
     }
 }
 
