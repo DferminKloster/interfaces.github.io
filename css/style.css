@@ -108,6 +108,8 @@ body{
 
 header{
     display: flex;
+    position: sticky;
+    z-index: 5;
     justify-content: space-between;
     align-items: center;
     width: 100%;
@@ -158,7 +160,7 @@ section h1 {
     cursor: pointer;
 }
 .menu-navbar {
-    background-color: #67989A;
+    background-color: #070F2F;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
@@ -172,7 +174,7 @@ section h1 {
     transition: 0.2s;
     transform: translateX(-100vw);
     position: absolute;
-    top: 68px;
+    top: 60px;
     visibility: hidden;
     z-index: 2;
 }
@@ -189,7 +191,9 @@ section h1 {
 }
 
 .menu-navbar-visible {
-    width: 100px;
+    left: 0%;
+    width: 250px;
+    height: 100vh;
     visibility: visible;
     z-index: 2;
     transform: translateX(0);
@@ -300,6 +304,7 @@ section h1 {
     height: 30px;
     width: auto;
     margin-right: 10px;
+    padding: 5px;
     border-radius: 10px;
     border: none;
     background-color: #EC9409;
