@@ -206,7 +206,6 @@ section h1 {
 
 .menu-navbar ul li {
     height: 20px;
-
     padding-top: 20px;
     padding-bottom: 10px;
     width: 100%;
@@ -321,7 +320,7 @@ section h1 {
 }
 
 .carrousel-container{
-    width: 230%;
+    width: 43%;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-start;
@@ -337,7 +336,7 @@ section h1 {
     display: inline-flex;
     height: 53%;
     transition: transform 0.2s ease-in-out;
-    transform: translateX(0px);
+    transform: translateX(50px);
 }
 
 .track .card {
@@ -346,7 +345,7 @@ section h1 {
 }
 
 .card{
-    width: 280px;
+    width: 24%;
     margin: 10px;
     border-radius: 6px;
     overflow: hidden;
@@ -494,6 +493,36 @@ h3{
 }
 .btn--1:hover::before {
     width: 100%;
+}
+
+.nav .prev {
+    left: -30px;
+    display: none;
+}
+
+.nav a {
+    position: absolute;
+    transform: translatey(-100px);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(180deg, #3E1F6E 0%, #3E1F6E 35%, #1B043D 100%);
+}
+
+a {
+    font-size: 16px;
+    font-weight: normal;
+    color: #EEE6E6;
+    text-decoration: none;
+}
+
+.nav .next {
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* QUITAR LUEGO DE PRUEBAS CON EL FOOTER */
