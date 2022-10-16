@@ -9,8 +9,22 @@
 }
 
 body{
-    background-color: #293462;
-    margin: 0;
+    background-color: #16204A;
+}
+
+h1 {
+    font-size: xxx-large;
+    color: #EC9409;
+}
+
+h2 {
+    font-size: xx-large;
+    color: #EC9409;
+}
+
+h3 {
+    font-size: x-large;
+    color: #EC9409;
 }
 
 .logocarga{
@@ -121,9 +135,8 @@ header{
     background: #070F2F;
 }
 
-h1 {
-    color: #EC9409;
-    margin: 10px;
+section h2 {
+    margin-left: 20px;
 }
 
 .logo{
@@ -551,6 +564,7 @@ footer{
     flex-direction: row;
     justify-content: flex-start;
     width: 96%;
+    bottom: 0;
     padding: 0% 2% 0% 2%;
     height: 200px;
     background-color: #070F2F;
@@ -643,4 +657,138 @@ footer{
     font-size: xx-large;
     font-weight: bolder;
     text-transform: capitalize;
+}
+
+/* PAGINA DE JUEGO */
+
+#bread_crum p {
+    color: #B46F02;
+    padding: 10px;
+    margin-left: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#game_presentation {
+    width: 96%;
+    height: 100px;
+    color: #EC9409;
+    background-color: #3E4977;
+    padding-left: 2%;
+    padding-right: 2%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: space-between;
+}
+
+#game_presentation div {
+    display: flex;
+    flex-direction: row;
+}
+
+#game_presentation div h1 {
+    padding-top: 15px;
+}
+
+#game_preview {
+    height: 90px;
+    width: 130px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#calification {
+    height: 40px;
+    width: 200px;
+    margin-top: 5px;
+    margin-right: 20px;
+}
+
+#share {
+    height: 50px;
+    width: 50px;
+}
+
+#game_section {
+    display: flex;
+    width: 98%;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 1%;
+    padding-right: 1%;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#game_section #game {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+#game_section #game img {
+    height: 450px;
+    width: 700px;
+}
+
+#game_section #control_section {
+    width: 20%;
+    border-radius: 10px;
+    padding-top: 15px;
+    background-color: #3E4977;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#arrows {
+    height: 160px;
+    width: 170px;
+}
+
+#enter {
+    height: 120px;
+    width: 120px;
+}
+
+#esc {
+    height: 110px;
+    width: 110px;
+}
+
+#images_videos {
+    width: 96%;
+    margin-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 2%;
+    padding-right: 2%;
+    background-color: #293462;
+}
+
+#images_videos div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#images_videos div img {
+    height: 130px;
+    width: 80%;
+}
+
+#description {
+    width: 96%;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-bottom: 30px;
+}
+
+#description p {
+    color: #EC9409;
+    font-weight: bold;
+    margin-top: 10px;
 }
