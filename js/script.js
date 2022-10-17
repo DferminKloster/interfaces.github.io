@@ -1,6 +1,7 @@
 "use strict";
 
 document.querySelector(".barra_menu").addEventListener("click", animacionBarra);
+document.getElementById("game_btn").addEventListener("click", redireccionar);
 
 let line1__barra = document.querySelector(".line1__barra_menu");
 let line2__barra = document.querySelector(".line2__barra_menu");
@@ -17,30 +18,12 @@ function animacionBarra(){
 
 }
 
+function redireccionar() {
+    window.location.href = "http://localhost/INTERFACES/juego.html";
+}
+
 /*menu de hamburguesas*/ 
 btnMenu.addEventListener("click", () => {
     desplegable.classList.toggle("menu-navbar-visible");
     
 })
-
-/*carga al inicio de empezar*/ 
-
-function calcularPorcentajeCarga() {
-    let porcentaje = 0;
-    const textPorcentaje = document.querySelector("#porcentaje-carga");
-    if (textPorcentaje) {
-        const contenedorCarga = document.querySelector("#contenedor-carga");
-        const intervalo = setInterval(() => {
-            if (porcentaje < 100) {
-                porcentaje = porcentaje + 10;
-                textPorcentaje.innerHTML = `${porcentaje}%`;
-            }
-        }, 500);
-        setTimeout(() => {
-            clearInterval(intervalo);
-            contenedorCarga.classList.toggle("contenedor-carga-hidden");
-        }, 0);
-    }
-}
-
-calcularPorcentajeCarga();

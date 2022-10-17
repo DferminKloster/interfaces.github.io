@@ -10,16 +10,19 @@
 </head>
 <body>
     <div id="contenedor-carga" class="contenedor-carga">
-        <div class="logocarga">
-            <div>
-                <img class="logocarga" src="assets/img/Logo.png" alt="Home">
-            </div>
+        <div>
+            <img class="logocarga" src="assets/img/Logo.png" alt="Home">
+            <img src="./assets/img/Genu!2.png" alt="name_logo" class="name_logo">
         </div>
+
         <div id="carga" class="carga">
+
         </div>
+
         <div class="porcentaje">
-            <p id="porcentaje-carga">0%</p>
+            <p id="porcentaje-carga"></p>
         </div>
+        
     </div>
     <header>
         <div class="logo" id="logo">
@@ -31,17 +34,22 @@
             </div>
 
             <div class="menu-navbar">
-                <h2>Genu!</h2>
+                <h1>Genu!</h1>
 
-                <ul>
-                    <li><a href=""><img src="" alt="account"> Mi cuenta</a></li>
-                    <li><a href=""><img src="" alt="favourites"> Favoritos</a></li>
-                    <li><a href=""><img src="" alt="history"> Historial</a></li>
-                    <li><a href=""><img src="" alt="friends"> Amigos</a></li>
-                    <li><a href=""><img src="" alt="membresy"> Membresía</a></li>
-                </ul>
+                <div>
+                    <ul>
+                        <li><a href="">Mi cuenta</a></li>
+                        <li><a href="">Favoritos</a></li>
+                        <li><a href="">Historial</a></li>
+                        <li><a href="">Amigos</a></li>
+                    </ul>
+                </div>
 
-                <img src="" alt=""><button class="btnlougout">LOG OUT</button>
+                <div id="nav_bar_logout">
+                    <img src="./assets/img/Configuration_Button.png" alt="configuration">
+                    <button class="btnlougout">Log Out</button>
+                </div>
+
                 <div class="Socialmedia">
                     <a href=""><img src="assets/img/Facebook_logo.png" alt=""></a>
                     <a href=""><img src="assets/img/Instagram_logo.png" alt=""></a>
@@ -67,14 +75,14 @@
     </section>
     
     <article class="games_menu">
-        <h1>Recomendados Para Tí</h1>
+        <h2>Recomendados Para Tí</h2>
         <section class="carrousel-container">
             <div class="track">
                 <div class="card">
                     <img src="assets/img/4 en linea/4 en linea.png" alt="">
                     <div class="contenido">
                         <h3>4 en linea</h3>
-                        <button class="btn btn--1">JUGAR</button> 
+                        <button id="game_btn" class="btn btn--1">JUGAR</button> 
                     </div>
                 </div>
                 <div class="card">
@@ -114,7 +122,7 @@
                 </div>
             </div>
         </section>
-        <h1>Deporte</h1>
+        <h2>Deporte</h2>
         <section class="carrousel-container">
             <div class="track">
                 <div class="card">
@@ -182,7 +190,7 @@
                 </div>
             </div>
         </section>
-        <h1>Accion</h1>
+        <h2>Accion</h2>
         <section class="carrousel-container">
             <div class="track">
                 <div class="card">
@@ -250,7 +258,7 @@
                 </div>
             </div>
         </section>
-        <h1>Aventura</h1>
+        <h2>Aventura</h2>
         <section class="carrousel-container">
             <div class="track">
                 <div class="card">
@@ -318,7 +326,7 @@
                 </div>
             </div>
         </section>
-        <h1>Clasicos</h1>
+        <h2>Clasicos</h2>
         <section class="carrousel-container">
             <div class="track">
                 <div class="card">
@@ -434,6 +442,7 @@
         </div>
     </footer>
     <script src="js/script.js"></script>
+    <script src="js/loading.js"></script>
 </body>
 </html>
 
