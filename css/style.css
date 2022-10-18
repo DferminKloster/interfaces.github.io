@@ -27,6 +27,13 @@ h3 {
     color: #EC9409;
 }
 
+@media (max-width: 768px) {
+
+    .nav input {
+        visibility: hidden;
+    }
+
+}
 .contenedor-carga {
     background-color: rgba(0, 0, 0, 0.6);
     height: 100%;
