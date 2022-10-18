@@ -829,3 +829,67 @@ footer{
     font-weight: bold;
     margin-top: 10px;
 }
+
+/* PAGINA DE PROXIMO JUEGO */
+
+
+.CS-img{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0px;
+}
+
+.BG {
+    height: 574px;
+    width: 100%;
+    top: 10%;
+    position: absolute;
+    z-index: 0;
+}
+
+.janzo {
+    position: absolute;
+    z-index: 1;
+    height: 355px;
+    left: 750px;
+    top: 235px;
+}
+
+.mercy {
+    position: absolute;
+    z-index: 1;
+    height: 355px;
+    left: 374px;
+    top: 235px;
+}
+
+.winston {
+    position: absolute;
+    z-index: 1;
+    height: 440px;
+    left: 462px;
+    top: 100px;
+}
+
+.CS-title {
+    height: 170px;
+    left: 31%;
+    top: 55px;
+    position: absolute;
+}
+
+.texto-juego-coming-soon{
+    position: absolute;
+    z-index: 2;
+    top: 495px;
+    right: 100px;
+    width: 89%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.texto{
+    text-shadow: 0 0 25px black;
+}
