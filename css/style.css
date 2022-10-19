@@ -601,6 +601,7 @@ footer{
     flex-direction: row;
     justify-content: flex-start;
     width: 96%;
+    top: 314%;
     bottom: 0;
     padding: 0% 2% 0% 2%;
     height: 200px;
