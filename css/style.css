@@ -893,3 +893,49 @@ footer{
 .texto{
     text-shadow: 0 0 25px black;
 }
+
+.info{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background-color: #3E4977;
+    padding-top: 10px;
+    top: 106%;
+    position: absolute;
+}
+
+.imagenes-juego{
+    height: 390px;
+    width: 99%;
+}
+
+.imagenes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 515%;
+}
+
+.descript{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    margin: 3%;
+    height: 372px;
+    text-shadow: 0 0 25px black;
+}
+
+.clasificacion{
+    display: inline-flex;
+    margin-right: 40px;
+    float:right;
+}
+
+.item{
+    margin: 1em;
+    padding: 1em;
+    height: 75px;
+}
