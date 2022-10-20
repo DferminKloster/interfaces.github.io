@@ -27,7 +27,7 @@ h3 {
     color: #EC9409;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 770px) {
 
     .nav input {
         display: none;
@@ -54,13 +54,13 @@ h3 {
     }
 
     .logocarga {
-        width: 10em;
+        width: 25vw;
     }
 
     .name_logo {
         margin-left: 10px;
-        width: 260px;
-        height: 100px;
+        width: 50vw;
+        height: 20vw;
     }
 
     .contenedor-carga-hidden {
@@ -178,6 +178,7 @@ h3 {
     }
 
     .nav img {
+        margin-top: 1.8vw;
         height: 30px;
         width: 35px;
         cursor: pointer;
@@ -296,7 +297,7 @@ h3 {
         margin: 0%;
 
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
         align-content: center;
     }
 
@@ -304,23 +305,18 @@ h3 {
         color: #EC9409;
         text-transform: capitalize;
         line-height: normal;
-        text-align: left;
+        text-align: center;
         font-weight: bold;
-        font-size: 65px;
+        font-size: 10vw;
 
-        position: absolute;
-        width: 50%;
-        left: 3%;
-        top: 20%;
+        width: 100vw;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: 0%;
     }
 
     #slogan img {
-        position: absolute;
-        width: 260px;
-        margin-top: 40px;
-        height: 260px;
-        right: 10%;
-        top: 15%;
+        display: none;
     }
 
     .perfil{
@@ -338,7 +334,7 @@ h3 {
 
     .perfil button, .email_submit{
         height: 30px;
-        width: auto;
+        width: fit-content;
         margin-right: 10px;
         padding: 5px;
         border-radius: 10px;
@@ -680,8 +676,8 @@ h3 {
     }
 
     .three {
-        padding-left: 2%;
-        width: 20%;
+        width: 100%;
+        margin-bottom: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -814,9 +810,14 @@ h3 {
     }
 
     footer {
+        display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         width: 96%;
+        height: 200px;
+        padding: 0% 2% 0% 2%;
+        background-color: #070F2F;
+        color: #EC9409;
     }
 
     .footer_div {
@@ -847,7 +848,7 @@ h3 {
     .one div img {
         margin-right: 7px;
     }
-    .one div a, up_text {
+    .one div a, .up_text {
         font-size: 25px;
         color: #EC9409;
         text-decoration: none;
@@ -866,8 +867,6 @@ h3 {
     }
     .two form {
         width: 80%;
-        display: flex;
-        flex-direction: column;
         margin-top: 15px;
     }
 
@@ -877,6 +876,14 @@ h3 {
 
     .email_input {
         width: 80%;
+        background-color: #616A93;
+        color: #FFFFFF;
+        font-weight: bold;
+        font-size: 20px;
+        border: none;
+        height: 30px;
+        border-radius: 10px;
+        margin-right: 10px;
     }
 
     .email_submit {
@@ -928,7 +935,7 @@ h3 {
         align-items: center;
     }
 
-    .nav input, .email_input {
+    .nav input {
         background-color: #616A93;
         color: #FFFFFF;
         font-weight: bold;
@@ -1101,7 +1108,7 @@ h3 {
 
     .perfil button, .email_submit{
         height: 30px;
-        width: auto;
+        width: fit-content;
         margin-right: 10px;
         padding: 5px;
         border-radius: 10px;
@@ -1222,7 +1229,6 @@ h3 {
 
     h3{
         color: #FFFFFF;
-        white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         width: 128px;
@@ -1489,6 +1495,61 @@ h3 {
         color: #EC9409;
         font-weight: bold;
         margin-top: 10px;
+    }
+
+    #reviews {
+        width: 96%;
+        margin-bottom: 20px;
+        padding-left: 2%;
+        padding-right: 2%; 
+    }
+
+    #cards {
+        display: flex;
+        width: 100%;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #writter_card {
+        width: 90%;
+        height: 175px;
+        align-self: center;
+        border-radius: 10px;
+        background-color: #3E4977;
+
+        display: flex;
+        flex-direction: row;
+    }
+
+    #user_section {
+        width: 13%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+    #user_section img {
+        align-self: center;
+        margin-bottom: 5px;
+        height: 100px;
+        width: 100px;
+    }
+
+    #comment_section {
+        width: 85%;
+    }
+    #comment_section div {
+        margin-top: 20px;
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    #comment_section div h3 {
+        color: #EC9409;
+        width: fit-content;
     }
 
     /* PAGINA DE PROXIMO JUEGO */
