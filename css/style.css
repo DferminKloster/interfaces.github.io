@@ -1826,6 +1826,7 @@ h3 {
 
 .personajes{
     width: 95%;
+    height: 76%;
     top: 2248px;
     overflow-x: scroll;
     position: absolute;
@@ -1838,8 +1839,7 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 10px;
-    height: 753px;
+    margin: 0px 135px;
 }
 
 .CS-PCard-img{
@@ -1850,8 +1850,7 @@ h3 {
 }
 .CS-PCard-ponints{
     display: flex;
-    width: 75%;
-    /*flex-direction: column;*/
+    width: 131%;
     align-items: center;
     background-color: #3E4977;
     border-radius: 10px;
@@ -1861,7 +1860,7 @@ h3 {
 .line-point {
     display: flex;
     align-items: center;
-    margin: 0px 10px;
+    margin: 3px 10px;
 }
 
 .line-point img{
