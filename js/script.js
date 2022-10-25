@@ -20,10 +20,10 @@ function animacionBarra(){
 }
 
 function redireccionar() {
-    window.location.href = "http://localhost/INTERFACES/juego.html";
+    window.location.href = "juego.html";
 }
 function redireccionar2() {
-    window.location.href = "http://localhost/INTERFACES/proximojuego.html";
+    window.location.href = "proximojuego.html";
 }
 
 /*menu de hamburguesas*/ 
