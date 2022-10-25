@@ -1,7 +1,8 @@
 "use strict";
 
 document.querySelector(".barra_menu").addEventListener("click", animacionBarra);
-document.getElementById("game_btn").addEventListener("click", redireccionar);
+document.getElementById("game_btn").addEventListener("click", redireccionar);;
+document.getElementById("button2").addEventListener("click", redireccionar2);
 
 let line1__barra = document.querySelector(".line1__barra_menu");
 let line2__barra = document.querySelector(".line2__barra_menu");
@@ -20,6 +21,9 @@ function animacionBarra(){
 
 function redireccionar() {
     window.location.href = "http://localhost/INTERFACES/juego.html";
+}
+function redireccionar2() {
+    window.location.href = "http://localhost/INTERFACES/proximojuego.html";
 }
 
 /*menu de hamburguesas*/ 
