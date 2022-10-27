@@ -1824,10 +1824,10 @@ h3 {
 
 .personajes{
     width: 95%;
-    height: 76%;
+    height: 507px;
     top: 2338px;
     overflow-x: scroll;
-    position: absolute;
+    position: relative;
     display: flex;
     flex-wrap: nowrap;
     padding: 16px;
