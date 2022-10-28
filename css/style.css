@@ -1662,14 +1662,14 @@ h3 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin: 20px 0px;
+        margin: 4px 0px;
     }
 
     .BG {
         height: 574px;
         width: 100%;
         top: 10%;
-        position: absolute;
+        position: relative;
         z-index: 0;
     }
 
@@ -1730,7 +1730,6 @@ h3 {
     background-color: #3E4977;
     padding-top: 10px;
     top: 106%;
-    position: absolute;
 }
 
 .imagenes-juego{
@@ -1780,7 +1779,6 @@ h3 {
     top: 189%;
     right: 1%;
     margin: 20px auto;
-    position: absolute;
     display: flex;
     flex-direction: column;
     z-index: 0;
@@ -1795,7 +1793,6 @@ h3 {
     top: 260%;
     right: 1%;
     margin: 20px auto;
-    position: absolute;
     display: flex;
     flex-direction: column;
     padding-top: 10px;
@@ -1827,7 +1824,6 @@ h3 {
     height: 507px;
     top: 2338px;
     overflow-x: scroll;
-    position: relative;
     display: flex;
     flex-wrap: nowrap;
     padding: 16px;
