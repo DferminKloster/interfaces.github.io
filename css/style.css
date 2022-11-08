@@ -1559,6 +1559,9 @@ h3 {
         margin-right: 40px;
         cursor: pointer;
     }
+    .token_selector h2 {
+        color: white;
+    }
     .token_selector img:hover {
         box-shadow: 0 0 40px rgb(255, 209, 56);
         border-radius: 50px;
