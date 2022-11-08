@@ -7,6 +7,7 @@ class Game {
         this.player1 = player1;
         this.player2 = player2;
         this.board = board;
+        //this.timer = new Timer(3, this.changeTurn);
 
         //CANTIDAD DE FICHAS QUE UTILIZA EL TABLERO
         this.totalTokens = this.board.getColumns() * this.board.getRows();
@@ -17,6 +18,7 @@ class Game {
     }
 
     init() {
+
         //TAMAÑO DEL TABLERO (PROPORCIONAL AL CANVAS)
         this.board.setSize(
                             this.canvas.width*0.60,
@@ -27,16 +29,17 @@ class Game {
         this.board.setPosY((canvas.height-this.board.getHeight())/2);
         //LLENA EL TABLERO CON CASILLAS
         this.board.fillBoard();
+        this.ctx.drawImage(document.getElementById("background"), 0, 0, this.canvas.width, this.canvas.height);
         //DIBUJA EL TABLERO EN PANTALLA
         this.board.write(this.ctx);
 
         //INSTANCIA LAS FICHAS NECESARIAS PARA CADA JUGADOR
         //(LA MITAD DE FICHAS TOTALES DEL TABLERO PARA C/U)
         this.player1.setTokens(this.totalTokens/2);
-        //DIBUJA FICHAS SEGUN JUGADOR Y SU UBICACION
-        this.generatePlayerTokens(player1, this.board.getPosX() + this.board.getWidth() + this.board.getPosX() * 0.35, 150);
         this.player2.setTokens(this.totalTokens/2);
-        this.generatePlayerTokens(player2, (canvas.width-this.board.getHeight())/4 * 1.25, 150);
+        //DIBUJA FICHAS SEGUN JUGADOR Y SU UBICACION
+        this.generatePlayerTokens(this.player1, this.board.getPosX() + this.board.getWidth() + this.board.getPosX() * 0.35, 150);
+        this.generatePlayerTokens(this.player2, (canvas.width-this.board.getHeight())/4 * 1.25, 150);
 
         //INICIA LOS EVENTOS DEL CURSOR
         this.initEvents();
@@ -56,6 +59,7 @@ class Game {
             tokens[t].setPosY(actualY);
             tokens[t].setSize(size);
             tokens[t].write(this.ctx);
+
             //DISTANCIA Y SOLAPAMIENTO ENTRE FICHAS (MODIFICABLE):
             //LAS FICHAS SE DIBUJAN EN FILA Y HACIA ABAJO
             actualY += 50;
@@ -71,9 +75,10 @@ class Game {
     reDraw(){
         this.clean();
         //LLAMA NUEVAMENTE A DIBUJAR TABLERO Y FICHAS DE JUGADORES
+        this.ctx.drawImage(document.getElementById("background"), 0, 0, this.canvas.width, this.canvas.height);
         this.board.write(this.ctx);
-        this.generatePlayerTokens(player1, this.board.getPosX() + this.board.getWidth() + this.board.getPosX() * 0.35, 150);
-        this.generatePlayerTokens(player2, (canvas.width-this.board.getHeight())/4 * 1.25, 150);
+        this.generatePlayerTokens(this.player1, this.board.getPosX() + this.board.getWidth() + this.board.getPosX() * 0.35, 150);
+        this.generatePlayerTokens(this.player2, (canvas.width-this.board.getHeight())/4 * 1.25, 150);
     }
 
     //OBTIENE LA UBICACION DEL CURSOR AL INTERACTUAR CON EL CANVAS
@@ -112,7 +117,6 @@ class Game {
                 if (space !== null) {
                     this.selectedToken.setPositionInBoard(column, space);
                     this.board.addToken(column, space, this.selectedToken);
-                    this.board.increaseFilledBoxes();
                     this.reDraw();
                     //VERIFICA SI HAY GANADOR LUEGO DE JUGADA
                     if (this.verifyIfWinner(this.selectedToken)) {
@@ -122,8 +126,7 @@ class Game {
                         //CON this.selectedToken.getPlayer() PUEDE OBTENERSE EL JUGADOR GANADOR
                         //CON .getName() SOBRE EL JUGADOR PARA OBTENER SU NOMBRE
                         console.log("hubo ganador: " + this.selectedToken.getPlayer().getName());
-                        this.selectedToken = null;
-                        this.reDraw();
+                        this.endGame();
                     }
                     else {
                         this.selectedToken = null;
@@ -221,5 +224,13 @@ class Game {
         else if(this.turn == this.player2) {
             this.turn = this.player1;
         }
+        console.log("Ahora es turno de: " + this.turn.getName());
+    }
+
+    endGame() {
+        this.clean();
+        this.ctx.drawImage(document.getElementById("background"), 0, 0, this.canvas.width, this.canvas.height);
+        this.board.write(this.ctx);
+        this.selectedToken = null;
     }
 }

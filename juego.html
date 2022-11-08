@@ -68,13 +68,54 @@
         </div>
 
         <div id="game_section">
+
+            <img src="./assets/img/4 en linea/diseño connect4/box.png" id="box">
+            <img src="./assets/img/4 en linea/diseño connect4/tokenP.png" id="plant">
+            <img src="./assets/img/4 en linea/diseño connect4/tokenZ.png" id="zombie">
+            <img src="./assets/img/4 en linea/diseño connect4/background.png" id="background">
+        
             <div id="game">
-                <img src="./assets/img/4 en linea/game.png" alt="game">
-                <div class="hero-title" id="hero-title-jugar">
-                    <h1 class="titles">4 En Linea: PVZ Edition</h1>
-                    <button class="item-btn btn-play" id="btn-play-cel">Jugar</button>
+
+                <canvas id="gameCanvas" class="displayNone" height="600" width="800"></canvas>
+
+                <div id="game_menu" class="displayShow">
+                    <div>
+                        <img src="./assets/img/4 en linea/diseño connect4/logo.png" alt="logo1" class="logos">
+                        <img src="./assets/img/4 en linea/diseño connect4/vs.png" alt="logo3" class="logos">
+                        <img src="./assets/img/4 en linea/diseño connect4/logoConnect.png" alt="logo2" class="logos">
+                    </div>
+                    <div id="difficulty_buttons">
+                        <button class="difficulty_buttons" id="easy">Facil</button>
+                        <button class="difficulty_buttons" id="medium">Intermedio</button>
+                        <button class="difficulty_buttons" id="hard">Dificil</button>
+                    </div>
+                    <div class="token_selector">
+                        <h2>JUGADOR 1</h2>
+                        <div>
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenP1.png" id="tokenP1" alt="">
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenP2.png" id="tokenP2" alt="">
+                        </div>
+                    </div>
+                    <div class="token_selector">
+                        <h2>JUGADOR 1</h2>
+                        <div>
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenZ1.png" id="tokenZ1" alt="">
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenZ2.png" id="tokenZ2" alt="">
+                        </div>
+                    </div>
+
+                    <button class="difficulty_buttons" id="play">JUGAR</button>
+
+                </div>
+    
+                <div id="control_section">
+                    <h2>Controles</h2>
+                    <img id="arrows" src="./assets/img/4 en linea/ARROWS.png" alt="arrows_control">
+                    <img id="enter" src="./assets/img/4 en linea/ENTER.png" alt="enter_control">
+                    <img id="esc" src="./assets/img/4 en linea/ESC.png" alt="esc_control">
                 </div>
             </div>
+
             <div id="control_section">
                 <h2>Controles</h2>
                 <img id="arrows" src="./assets/img/4 en linea/ARROWS.png" alt="arrows_control">
@@ -228,5 +269,11 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="./connect4/Token.js"></script>
+    <script src="./connect4/Box.js"></script>
+    <script src="./connect4/Player.js"></script>
+    <script src="./connect4/Board.js"></script>
+    <script src="./connect4/Game.js"></script>
+    <script src="./connect4/Main.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 class Board {
 
-    constructor (goal, rows, columns, primary, secondary) {
+    constructor (goal, rows, columns, primary, secondary, box) {
         this.boxes = new Array();
         this.connectGoal = goal;
         this.posX = null;
@@ -9,9 +9,9 @@ class Board {
         this.width = null;
         this.rows = rows;
         this.columns = columns;
-        this.filledBoxes = 0;
         this.primaryColor = primary;
         this.secondaryColor = secondary;
+        this.boxImage = box;
     }
 
     getColumns() {
@@ -31,12 +31,6 @@ class Board {
     }
     getPosY() {
         return this.posY;
-    }
-    getFilledBoxes() {
-        return this.filledBoxes;
-    }
-    increaseFilledBoxes() {
-        this.filledBoxes++;
     }
     setPosX(x) {
         this.posX = x;
@@ -91,6 +85,9 @@ class Board {
         for(let column = 0; column < this.columns; column++) {
             if (this.boxes[column][row].getState() == token.getPlayer()) {
                 tokenSummatory++;
+                if(tokenSummatory == this.connectGoal) {
+                    return true;
+                }
             }
             if(column+1 < this.columns) {
                 if(this.boxes[column+1][row].getState() != null && this.boxes[column+1][row].getState() != token.getPlayer()) {
@@ -98,13 +95,7 @@ class Board {
                 }
             }
         }
-        console.log(tokenSummatory);
-        if(tokenSummatory == this.connectGoal) {
-            return true;
-        }
-        else {
-            return false;
-        }
+        return false;
     }
 
     verifyOnColumn(token) {
@@ -227,7 +218,7 @@ class Board {
             for (let y = 0; y < this.rows; y++) {
                 
                 this.boxes[x][y] = (new Box(actualX, actualY, this.width/this.columns, this.height/this.rows,
-                                        this.primaryColor, this.secondaryColor)
+                                        this.primaryColor, this.secondaryColor, this.boxImage)
                                     );
                 
                 actualY += this.height/this.rows;

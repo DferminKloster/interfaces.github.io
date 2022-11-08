@@ -1,11 +1,10 @@
 class Player {
 
-    constructor(name, color/*, image, tokenImage*/) {
+    constructor(name, color, image) {
         this.name = name;
         this.color = color;
-        //this.image = image;
+        this.image = image;
         this.tokens = new Array();
-        //this.tokenImage = tokenImage;
     }
 
     setTokens(tokenCount) {
@@ -38,10 +37,6 @@ class Player {
 
     getColor() {
         return this.color;
-    }
-
-    getTokenImage() {
-        return this.tokenImage;
     }
 
     getImage() {

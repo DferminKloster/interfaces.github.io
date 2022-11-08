@@ -1143,7 +1143,7 @@ h3 {
         width: 35px;
     }
 
-    .perfil button, .email_submit{
+    .perfil button, .email_submit, .difficulty_buttons {
         height: 30px;
         width: fit-content;
         margin-right: 10px;
@@ -1496,18 +1496,80 @@ h3 {
         padding-left: 1%;
         padding-right: 1%;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-around;
     }
 
-    #game_section #game {
+    #game {
         display: flex;
-        justify-content: center;
-        width: 80%;
+        flex-direction: row;
     }
 
-    #game_section #game img {
-        height: 450px;
-        width: 700px;
+    #game_menu {
+        background-image: url("../connect4/background.png");
+        height: 600px;
+        width: 800px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .displayNone {
+        display: none;
+    }
+    .displayShow {
+        display: flex;
+    }
+    .iluminateOption {
+        box-shadow: 0 0 40px rgb(255, 209, 56);
+        border-radius: 50px;
+    }
+
+    .logos {
+        margin-top: 20px;
+        height: 150px;
+        width: 250px;
+    }
+
+    #difficulty_buttons {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .difficulty_buttons {
+        height: 50px;
+        width: 100px;
+        color: white;
+        border: 1px solid black;
+        font-weight: bold;
+        font-size: large;
+        margin-top: 20px;
+    }
+
+    .token_selector {
+        width: 100%;
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: row;
+    }
+    .token_selector img {
+        height: 100px;
+        width: 100px;
+        margin-right: 40px;
+        cursor: pointer;
+    }
+    .token_selector img:hover {
+        box-shadow: 0 0 40px rgb(255, 209, 56);
+        border-radius: 50px;
+    }
+    .difficulty_buttons:hover {
+        box-shadow: 0 0 40px rgb(255, 209, 56);
+        border-radius: 10px;
+    }
+
+    #box, #plant, #zombie, #background {
+        display: none;
     }
 
     #game_section #control_section {
