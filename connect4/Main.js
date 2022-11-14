@@ -31,16 +31,32 @@ hardDiff.addEventListener("click", function() {
 function setDifficulty(diff) {
     switch (diff) {
         case "easy":
-            difficulty = 3;
+            difficulty = {
+                "connect": 3,
+                "columns": 4,
+                "rows": 5
+            };
             break;
         case "medium":
-            difficulty = 4;
+            difficulty = {
+                "connect": 4,
+                "columns": 5,
+                "rows": 6
+            };
             break;
         case "hard":
-            difficulty = 5;
+            difficulty = {
+                "connect": 5,
+                "columns": 6,
+                "rows": 7
+            };
             break;
         default:
-            difficulty = 4;
+            difficulty = {
+                "connect": 4,
+                "columns": 5,
+                "rows": 6
+            };
             break;
     }
 }
@@ -134,9 +150,9 @@ function allOptionsSelected() {
 
 function configureGame() {
     //INSTANCIA DE TABLERO
-    let board = new Board ( difficulty, //CANTIDAD DE FICHAS A CONECTAR
-                            6, //FILAS
-                            5, //COLUMNAS
+    let board = new Board ( difficulty.connect, //CANTIDAD DE FICHAS A CONECTAR
+                            difficulty.rows, //FILAS
+                            difficulty.columns, //COLUMNAS
                             "red", //COLOR PRIMARIO (FONDO DE TABLERO) (OBSOLETO)
                             "rgba(0, 0, 0, 0.247)", //COLOR SECUNDARIO (ESPACIO DE FICHA)
                             document.getElementById("box"));

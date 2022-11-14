@@ -125,7 +125,15 @@ class Game {
                         //AQUI SE APLICA ACCION CORRESPONDIENTE
                         //CON this.selectedToken.getPlayer() PUEDE OBTENERSE EL JUGADOR GANADOR
                         //CON .getName() SOBRE EL JUGADOR PARA OBTENER SU NOMBRE
+                        canvas.classList.remove("displayShow");
+                        canvas.classList.add("displayNone");
+                        document.getElementById("game_over").classList.remove("displayNone");
+                        document.getElementById("game_over").classList.add("displayShow");
+                
+                        document.getElementById("winner").innerHTML = this.selectedToken.getPlayer().getName();
+                        document.getElementById("winner").style.color = this.selectedToken.getPlayer().getColor();
                         console.log("hubo ganador: " + this.selectedToken.getPlayer().getName());
+
                         this.endGame();
                     }
                     else {
