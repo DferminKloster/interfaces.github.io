@@ -110,20 +110,27 @@
                 <div id="game_over" class="displayNone">
                     <h1>GAME OVER</h1>
                     <h2>HA GANADO: <span id="winner"></span></h2>
-                    <h2>TIEMPO DE JUEGO: <span id="time"></span></h2>
-                    <button class="difficulty_buttons" id="reboot">REINICIAR</button>
+                    <h2>TIEMPO DE JUEGO: <span id="totalTime"></span></h2>
+                    <button class="difficulty_buttons" id="reboot1">REINICIAR</button>
                 </div>
 
-                <div id="control_section">
-                    <h2>Controles</h2>
-                    <img id="arrows" src="./assets/img/4 en linea/ARROWS.png" alt="arrows_control">
-                    <img id="enter" src="./assets/img/4 en linea/ENTER.png" alt="enter_control">
-                    <img id="esc" src="./assets/img/4 en linea/ESC.png" alt="esc_control">
+                <div id="game_tab" class="game_tab displayShow">
+                    <div>
+                        <h2>Turno:</h2>
+                        <h2 id="turn">...</h2>
+                    </div>
+                    <div>
+                        <h2>Tiempo:</h2>
+                        <h2><span id="count">15</span> Secs.</h2>
+                    </div>
+                    <div>
+                        <button class="difficulty_buttons displayNone" id="reboot2">REINICIAR</button>
+                    </div>   
                 </div>
     
             </div>
 
-            <div id="control_section">
+            <div class="control_section">
                 <h2>Controles</h2>
                 <img id="arrows" src="./assets/img/4 en linea/ARROWS.png" alt="arrows_control">
                 <img id="enter" src="./assets/img/4 en linea/ENTER.png" alt="enter_control">
@@ -276,6 +283,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="./connect4/Timer.js"></script>
     <script src="./connect4/Token.js"></script>
     <script src="./connect4/Box.js"></script>
     <script src="./connect4/Player.js"></script>

@@ -15,6 +15,10 @@ class Player {
         this.tokens = tokenList;
     }
 
+    resetToken() {
+        this.tokens = new Array();
+    }
+
     addToken(token) {
         this.tokens.push(token);
     }

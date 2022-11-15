@@ -1,26 +1,20 @@
 class Timer {
 
-    constructor (segundos, funcion) {
-        //this.contenedor = contenedor;
-        this.segundos = segundos;
-        this.contador = segundos;
-        this.funcion = funcion;
+    constructor (count) {
+        this.count = count;
+        this.contador = 0;
     }
 
-    startCount() {
-        if (this.segundos != this.contador) {
-            this.resetCount();
-        }
-        for(let s = this.segundos; s >= 0; s--) {
+    startCount(countInDOM, changeTurn) {
+        for(let seconds = this.count; seconds > 0; seconds--) {
             setTimeout(() => {
-                //this.contenedor.innerHTML = this.contador;
-                this.contador--;
+                countInDOM.innerHTML = seconds;
             }, 1000);
         }
-        this.funcion;
+        changeTurn();
     }
 
     resetCount() {
-        this.contador = this.segundos;
+        this.contador = 0;
     }
 }

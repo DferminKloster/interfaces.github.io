@@ -226,7 +226,10 @@ class Board {
             actualX += this.width/this.columns;
             actualY = this.posY;
         }
+    }
 
+    resetBoard() {
+        this.boxes = new Array();
     }
 
     write(ctx) {

@@ -7,7 +7,7 @@ class Game {
         this.player1 = player1;
         this.player2 = player2;
         this.board = board;
-        //this.timer = new Timer(3, this.changeTurn);
+        this.totalTime = 0;
 
         //CANTIDAD DE FICHAS QUE UTILIZA EL TABLERO
         this.totalTokens = this.board.getColumns() * this.board.getRows();
@@ -15,10 +15,27 @@ class Game {
         this.selectedToken = null;
         //TURNO CORRESPONDIENTE
         this.turn = null;
+        this.turnCompleted = 0;
+    }
+
+    getPlayer1() {
+        return this.player1;
+    }
+    getPlayer2() {
+        return this.player2;
+    }
+    getBoard() {
+        return this.board;
+    }
+    resetTotalTime() {
+        this.totalTime = 0;
+        console.log("fybca");
+    }
+    resetSelectedToken() {
+        this.selectedToken = null;
     }
 
     init() {
-
         //TAMAÑO DEL TABLERO (PROPORCIONAL AL CANVAS)
         this.board.setSize(
                             this.canvas.width*0.60,
@@ -46,6 +63,10 @@ class Game {
 
         //SELECCIONA EL TURNO ALEATORIAMENTE
         this.selectRandomTurn();
+        let turn_tab = document.getElementById("turn");
+        this.startTimer();
+        turn_tab.innerHTML = this.turn.getName();
+        turn_tab.style.color = this.turn.getColor();
         console.log(this.turn);
     }
 
@@ -120,11 +141,6 @@ class Game {
                     this.reDraw();
                     //VERIFICA SI HAY GANADOR LUEGO DE JUGADA
                     if (this.verifyIfWinner(this.selectedToken)) {
-                        //AQUI SE APLICA ACCION CORRESPONDIENTE
-                        //AQUI SE APLICA ACCION CORRESPONDIENTE
-                        //AQUI SE APLICA ACCION CORRESPONDIENTE
-                        //CON this.selectedToken.getPlayer() PUEDE OBTENERSE EL JUGADOR GANADOR
-                        //CON .getName() SOBRE EL JUGADOR PARA OBTENER SU NOMBRE
                         canvas.classList.remove("displayShow");
                         canvas.classList.add("displayNone");
                         document.getElementById("game_over").classList.remove("displayNone");
@@ -134,9 +150,11 @@ class Game {
                         document.getElementById("winner").style.color = this.selectedToken.getPlayer().getColor();
                         console.log("hubo ganador: " + this.selectedToken.getPlayer().getName());
 
+                        this.turnCompleted = 2;
                         this.endGame();
                     }
                     else {
+                        this.turnCompleted = 1;
                         this.selectedToken = null;
                         this.changeTurn();
                     }
@@ -232,7 +250,37 @@ class Game {
         else if(this.turn == this.player2) {
             this.turn = this.player1;
         }
-        console.log("Ahora es turno de: " + this.turn.getName());
+        this.startTimer();
+
+        let turn_tab = document.getElementById("turn");
+        turn_tab.innerHTML = this.turn.getName();
+        turn_tab.style.color = this.turn.getColor();
+    }
+
+    startTimer() {
+        let count = 16;
+        
+        let interval = setInterval(() => {
+            if (this.turnCompleted == 0) {
+                if (count > 0) {
+                    count--;
+                    this.totalTime++;
+                    document.getElementById("count").innerHTML = count;
+                }
+                else {
+                    clearInterval(interval);
+                    this.changeTurn();
+                }
+            }
+            else if (this.turnCompleted == 1) {
+                clearInterval(interval);
+                this.turnCompleted = 0;
+            }
+            else {
+                clearInterval(interval);
+            }
+        }, 1000);
+        
     }
 
     endGame() {
@@ -240,5 +288,18 @@ class Game {
         this.ctx.drawImage(document.getElementById("background"), 0, 0, this.canvas.width, this.canvas.height);
         this.board.write(this.ctx);
         this.selectedToken = null;
+
+        document.getElementById("totalTime").innerHTML = this.totalTime + " Segundos."
+        document.getElementById("count").innerHTML = "...";
+    }
+
+    resetGame() {
+        console.log("log");
+        resetTotalTime();
+        //this.resetSelectedToken();
+        //this.resetBoard();
+        //this.resetTokens();
+        //this.resetTokens();
+        init();
     }
 }

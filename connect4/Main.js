@@ -163,10 +163,28 @@ function configureGame() {
 
     //INSTANCIA DE NUEVO JUEGO
     let game = new Game(canvas, ctx, player1, player2, board);
-    //INICIAR EL JUEGO
+
     document.getElementById("game_menu").classList.remove("displayShow");
     document.getElementById("game_menu").classList.add("displayNone");
+    
+    document.getElementById("reboot2").classList.remove("displayNone");
+    document.getElementById("reboot2").classList.add("displayShow");
+    
     canvas.classList.remove("displayNone");
     canvas.classList.add("displayShow");
+    
+    document.getElementById("game_tab").classList.remove("displayNone");
+    document.getElementById("game_tab").classList.add("displayShow");
+
+    //OTORGAR EVENTO DE REINICIO A BOTONES CORRESPONDIENTES
+    document.getElementById("reboot1").addEventListener("click", function() {
+        game.resetGame();
+    });
+    document.getElementById("reboot2").addEventListener("click", function() {
+        game.resetGame();
+    });
+
+    //INICIAR EL JUEGO
     game.init();
 }
+
