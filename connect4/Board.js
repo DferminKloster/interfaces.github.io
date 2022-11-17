@@ -2,6 +2,7 @@ class Board {
 
     constructor (goal, rows, columns, primary, secondary, box) {
         this.boxes = new Array();
+        this.boxesFilled = 0;
         this.connectGoal = goal;
         this.posX = null;
         this.posY = null;
@@ -77,6 +78,14 @@ class Board {
 
     addToken(column, row, token) {
         this.boxes[column][row].changeState(token.getPlayer());
+        this.boxesFilled++;
+    }
+
+    isFull() {
+        if (this.boxesFilled == (this.columns * this.rows)) {
+            return true;
+        }
+        return false;
     }
 
     verifyOnRow(token) {
@@ -210,6 +219,11 @@ class Board {
     fillBoard() {
         let actualX = this.posX;
         let actualY = this.posY;
+
+        if (this.boxes.length != 0) {
+            this.boxes = new Array();
+            this.boxesFilled = 0;
+        }
     
         //HORIZONTAL (COLUMNAS)
         for (let x = 0; x < this.columns; x++) {
@@ -226,10 +240,6 @@ class Board {
             actualX += this.width/this.columns;
             actualY = this.posY;
         }
-    }
-
-    resetBoard() {
-        this.boxes = new Array();
     }
 
     write(ctx) {

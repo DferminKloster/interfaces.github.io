@@ -8,15 +8,14 @@ class Player {
     }
 
     setTokens(tokenCount) {
+        if (this.tokens.length != 0) {
+            this.tokens = new Array();
+        }
        let tokenList = new Array();
         for(let t = 0; t < tokenCount; t++) {
             tokenList.push(new Token(this));
         }
         this.tokens = tokenList;
-    }
-
-    resetToken() {
-        this.tokens = new Array();
     }
 
     addToken(token) {

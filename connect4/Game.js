@@ -15,7 +15,7 @@ class Game {
         this.selectedToken = null;
         //TURNO CORRESPONDIENTE
         this.turn = null;
-        this.turnCompleted = 0;
+        this.turnCompleted = 0; // 0=FALSE / 1=TRUE / 3=GAMEOVER
     }
 
     getPlayer1() {
@@ -148,15 +148,21 @@ class Game {
                 
                         document.getElementById("winner").innerHTML = this.selectedToken.getPlayer().getName();
                         document.getElementById("winner").style.color = this.selectedToken.getPlayer().getColor();
-                        console.log("hubo ganador: " + this.selectedToken.getPlayer().getName());
 
                         this.turnCompleted = 2;
-                        this.endGame();
                     }
                     else {
-                        this.turnCompleted = 1;
-                        this.selectedToken = null;
-                        this.changeTurn();
+                        if(this.board.isFull()) {
+                            this.turnCompleted = 3;
+                            this.selectedToken = null;
+                            document.getElementById("winner").innerHTML = "Draw";
+                            document.getElementById("winner").style.color = "yellow";
+                        }
+                        else {
+                            this.turnCompleted = 1;
+                            this.selectedToken = null;
+                            this.changeTurn();
+                        }
                     }
                 }
                 else {
@@ -258,10 +264,14 @@ class Game {
     }
 
     startTimer() {
-        let count = 16;
+        document.getElementById("count").innerHTML = 15;
+        let count = 15;
         
         let interval = setInterval(() => {
             if (this.turnCompleted == 0) {
+                if((Number)(document.getElementById("count").textContent) < count) {
+                    clearInterval(interval);
+                }
                 if (count > 0) {
                     count--;
                     this.totalTime++;
@@ -282,24 +292,5 @@ class Game {
         }, 1000);
         
     }
-
-    endGame() {
-        this.clean();
-        this.ctx.drawImage(document.getElementById("background"), 0, 0, this.canvas.width, this.canvas.height);
-        this.board.write(this.ctx);
-        this.selectedToken = null;
-
-        document.getElementById("totalTime").innerHTML = this.totalTime + " Segundos."
-        document.getElementById("count").innerHTML = "...";
-    }
-
-    resetGame() {
-        console.log("log");
-        resetTotalTime();
-        //this.resetSelectedToken();
-        //this.resetBoard();
-        //this.resetTokens();
-        //this.resetTokens();
-        init();
-    }
+    
 }

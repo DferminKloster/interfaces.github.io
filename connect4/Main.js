@@ -6,6 +6,11 @@ let difficulty = null;
 let tokenPlayer1 = null;
 let tokenPlayer2 = null;
 
+let game = null;
+let board = null;
+let player1 = null;
+let player2 = null;
+
 //BOTONES DE MENÚ:
 const easyDiff = document.getElementById("easy");
 easyDiff.addEventListener("click", function() {
@@ -149,8 +154,13 @@ function allOptionsSelected() {
 }
 
 function configureGame() {
+
+    if (game != null) {
+        game.init();
+    }
+    
     //INSTANCIA DE TABLERO
-    let board = new Board ( difficulty.connect, //CANTIDAD DE FICHAS A CONECTAR
+    board = new Board ( difficulty.connect, //CANTIDAD DE FICHAS A CONECTAR
                             difficulty.rows, //FILAS
                             difficulty.columns, //COLUMNAS
                             "red", //COLOR PRIMARIO (FONDO DE TABLERO) (OBSOLETO)
@@ -158,14 +168,17 @@ function configureGame() {
                             document.getElementById("box"));
 
     //INSTANCIA DE JUGADORES (NOMBRE Y COLOR DE FICHA)
-    let player1 = new Player("Plants", tokenPlayer1.color, tokenPlayer1.image);
-    let player2 = new Player("Zombies", tokenPlayer2.color, tokenPlayer2.image);
+    player1 = new Player("Plants", tokenPlayer1.color, tokenPlayer1.image);
+    player2 = new Player("Zombies", tokenPlayer2.color, tokenPlayer2.image);
 
     //INSTANCIA DE NUEVO JUEGO
-    let game = new Game(canvas, ctx, player1, player2, board);
+    game = new Game(canvas, ctx, player1, player2, board);
 
     document.getElementById("game_menu").classList.remove("displayShow");
     document.getElementById("game_menu").classList.add("displayNone");
+
+    document.getElementById("game_over").classList.remove("displayShow");
+    document.getElementById("game_over").classList.add("displayNone");
     
     document.getElementById("reboot2").classList.remove("displayNone");
     document.getElementById("reboot2").classList.add("displayShow");
@@ -178,10 +191,10 @@ function configureGame() {
 
     //OTORGAR EVENTO DE REINICIO A BOTONES CORRESPONDIENTES
     document.getElementById("reboot1").addEventListener("click", function() {
-        game.resetGame();
+        configureGame();
     });
     document.getElementById("reboot2").addEventListener("click", function() {
-        game.resetGame();
+        configureGame();
     });
 
     //INICIAR EL JUEGO
