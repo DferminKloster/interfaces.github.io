@@ -2138,5 +2138,55 @@ h3 {
         border-radius: 50%;
     }
 
+    /*.ryu {
+        width: 435px;
+        height: 267px;
+        margin: -5% auto 0 auto;
+        background:  url('http://bennet.org/images/codepen/ryu-sprite-demo.png') no-repeat 0 0%;
+        animation: sprite 3.5s steps(45) infinite;
+    }
+    
+    @keyframes sprite {
+        from { background-position: 0 0%; }
+        to { background-position: 0 100%; }
+    }*/
+
+    /*.ryu{
+        height: 131px;
+        width: 125px;
+        background-image: url('../assets/img/spritesheet/megaman.png');
+        margin: 0 auto;
+        color: #070F2F;
+        animation: correr 1s steps(5) infinite;
+    }*/
+    /*background-position: -256px 0;*/
+
+    /*@keyframes correr {
+        0%{
+            background-position: 0px;
+        }
+        100%{
+            background-position: -627px;
+        }
+    }*/
+
+    .ryu{
+        height: 169px;
+        width: 120px;
+        background-image: url('../assets/img/spritesheet/solado76ani.png');
+        margin: 0 auto;
+        color: #070F2F;
+        animation: correr 3s steps(7) infinite;
+    }
+
+    @keyframes correr {
+        0%{
+            background-position: 0px;
+        }
+        100%{
+            background-position: -839px;
+        }
+    }
+
 }
 
