@@ -19,7 +19,7 @@ window.addEventListener("scroll", () =>{
     janzo.style.animationName = "none";*/
     hero.style.animationName = "none";
 
-    title.style.top = value * 0.5  + 'px';
+    title.style.left = value * 1  + '0.5px';
     texto.style.left= -value * 0.5 + 'px';
 
     setTimeout(() => {
