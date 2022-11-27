@@ -1843,7 +1843,7 @@ h3 {
         z-index: 0;
     }
 
-    .janzo {
+    .janzo{
         position: absolute;
         z-index: 1;
         height: 355px;
@@ -1866,7 +1866,7 @@ h3 {
         }
     }
 
-    .mercy {
+    .mercy{
         position: absolute;
         z-index: 1;
         height: 355px;
@@ -1940,8 +1940,11 @@ h3 {
         text-shadow: 0 0 25px black;
     }
 
-    
     .info{
+        opacity: 0;
+    }
+    
+    .info.visible{
         width: 100%;
         height: 428px;
         background-color: #3E4977;
@@ -1973,6 +1976,10 @@ h3 {
     }
 
     .imagenes{
+        opacity: 0;
+    }
+
+    .imagenes.visible{
         margin: 22px;
         width: 270px;
         position: absolute;
@@ -1992,6 +1999,10 @@ h3 {
     }
 
     .descript{
+        opacity: 0;
+    }
+
+    .descript.visible{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2035,8 +2046,12 @@ h3 {
         margin: 5px;
         border-radius: 15px;
     }
+
+    .carrousel-container{
+        opacity: 0;
+    }
     
-    .carrousel-container.galeria {
+    .carrousel-container.galeria.visible {
         width: 98%;
         top: 189%;
         margin: 20px auto;
@@ -2063,8 +2078,12 @@ h3 {
         padding-top: 10px;
         width: 100%;
     }
+
+    .carrousel{
+        opacity: 0;
+    }
     
-    .carrousel.galeria{
+    .carrousel.galeria.visible{
         width: 98%;
         top: 260%;
         margin: 20px auto;
@@ -2107,6 +2126,7 @@ h3 {
         font-size: x-large;
         color: #EC9409;
     }
+
 
     .personajes{
         width: 95%;
