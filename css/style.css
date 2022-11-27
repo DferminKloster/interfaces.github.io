@@ -2126,8 +2126,10 @@ h3 {
         font-size: x-large;
         color: #EC9409;
     }
-
-
+    .perosnajes{
+        opacity: 0;
+    }
+    
     .personajes{
         width: 95%;
         height: 507px;
@@ -2151,7 +2153,7 @@ h3 {
             opacity: 1;
         }
     }
-    
+
     .CS-PCard{
         display: flex;
         flex-direction: column;
