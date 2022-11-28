@@ -14,19 +14,19 @@ const hero = document.querySelector(".personajes");
 window.addEventListener("scroll", () =>{
     var value = window.scrollY;
 
-    /*winston.style.animationName = "none";
+    winston.style.animationName = "none";
     mercy.style.animationName = "none";
-    janzo.style.animationName = "none";*/
-    hero.style.animationName = "none";
+    janzo.style.animationName = "none";
+    /*hero.style.animationName = "none";*/
 
     title.style.left = value * 1  + '0.5px';
     texto.style.left= -value * 0.5 + 'px';
 
     setTimeout(() => {
-        /*winston.style.animationName = "winston";
+        winston.style.animationName = "winston";
         mercy.style.animationName = "mercy";
-        janzo.style.animationName = "janzo";*/
-        hero.style.animationName = "hero"; 
+        janzo.style.animationName = "janzo";
+        /*hero.style.animationName = "hero";*/
     }, 0);
 });
 
@@ -55,6 +55,7 @@ observador.observe(descript);
 observador.observe(info);
 observador.observe(carrousel);
 observador.observe(featuring);
+observador.observe(hero);
 
 
 
