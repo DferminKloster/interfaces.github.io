@@ -1628,6 +1628,10 @@ h3 {
     .displayShow {
         display: flex;
     }
+    .iluminateOption {
+        box-shadow: 0 0 40px rgb(255, 209, 56);
+        border-radius: 50px;
+    }
 
     .logos {
         margin-top: 20px;

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/dd2f13833b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header id="header" class="header_scroll_up">
+        <div class="logo" id="logo">
+            <a href="index.html"><img src="assets/img/Logo.png" alt="Home"></a>
+            <div class="barra_menu">
+                <span class="line1__barra_menu"></span>
+                <span class="line2__barra_menu"></span>
+                <span class="line3__barra_menu"></span>
+            </div>
+
+            <div class="menu-navbar">
+                <h1 class="navBarElement translateOut">Genu!</h1>
+
+                <div>
+                    <ul>
+                        <li class="navBarElement translateOut"><a href="">Mi cuenta</a></li>
+                        <li class="navBarElement translateOut"><a href="">Favoritos</a></li>
+                        <li class="navBarElement translateOut"><a href="">Historial</a></li>
+                        <li class="navBarElement translateOut"><a href="">Amigos</a></li>
+                    </ul>
+                </div>
+
+                <div id="nav_bar_logout" class="navBarElement translateOut">
+                    <img src="./assets/img/Configuration_Button.png" alt="configuration">
+                    <button class="btnlougout">Log Out</button>
+                </div>
+
+                <div class="Socialmedia navBarElement translateOut">
+                    <a href=""><img src="assets/img/Facebook_logo.png" alt=""></a>
+                    <a href=""><img src="assets/img/Instagram_logo.png" alt=""></a>
+                    <a href=""> <img src="assets/img/twitter_logo.png" alt=""> </a>
+                </div>
+            </div>
+        </div>
+        <div class="nav" id="nav">
+            <input type="text" placeholder="Buscar">
+            <img src="./assets/img/Lupa.png" alt="buscar">  
+        </div>
+        <div class="perfil" id="perfil">
+            <button><a href="" class="nav-anchor">Try Premium</a></button>
+            <img src="./assets/img/User Icon.png" alt="User Menu">                                
+        </div>  
+    </header>
+    <div id="arrowHeader" class="invisible">
+        <img src="./assets/img/arrowHeader.png" alt="">
+    </div>  
+
+    <article class="game">
+        <div id="bread_crum">
+            <p>Inicio > Juegos Populares > Juegos de Estrategia > Cuatro en Linea</p>
+        </div>
+        <div id="game_presentation">
+            <div>
+                <img src="./assets/img/4 en linea/game.png" alt="game_img" id="game_preview">
+                <h1>4 En Linea: PVZ Edition</h1>
+            </div>
+            <div>
+                <img src="./assets/img/4 en linea/Stars_Rating.png" alt="calification" id="calification">
+                <img src="./assets/img/4 en linea/share_button.png" alt="share" id="share">
+            </div>
+        </div>
+
+        <div id="game_section">
+
+            <img src="./assets/img/4 en linea/diseño connect4/box.png" id="box">
+            <img src="./assets/img/4 en linea/diseño connect4/tokenP.png" id="plant">
+            <img src="./assets/img/4 en linea/diseño connect4/tokenZ.png" id="zombie">
+            <img src="./assets/img/4 en linea/diseño connect4/background.png" id="background">
+        
+            <div id="game">
+
+                <canvas id="gameCanvas" class="displayNone" height="600" width="800"></canvas>
+
+                <div id="game_menu" class="displayShow">
+                    <div>
+                        <img src="./assets/img/4 en linea/diseño connect4/logo.png" alt="logo1" class="logos">
+                        <img src="./assets/img/4 en linea/diseño connect4/vs.png" alt="logo3" class="logos">
+                        <img src="./assets/img/4 en linea/diseño connect4/logoConnect.png" alt="logo2" class="logos">
+                    </div>
+                    <div id="difficulty_buttons">
+                        <button class="difficulty_buttons" id="easy">Facil</button>
+                        <button class="difficulty_buttons" id="medium">Intermedio</button>
+                        <button class="difficulty_buttons" id="hard">Dificil</button>
+                    </div>
+                    <div class="token_selector">
+                        <h2>JUGADOR 1</h2>
+                        <div>
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenP1.png" id="tokenP1" alt="">
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenP2.png" id="tokenP2" alt="">
+                        </div>
+                    </div>
+                    <div class="token_selector">
+                        <h2>JUGADOR 1</h2>
+                        <div>
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenZ1.png" id="tokenZ1" alt="">
+                            <img src="./assets/img/4 en linea/diseño connect4/tokenZ2.png" id="tokenZ2" alt="">
+                        </div>
+                    </div>
+
+                    <button class="difficulty_buttons" id="play">JUGAR</button>
+                </div>
+
+                <div id="game_over" class="displayNone">
+                    <h1>GAME OVER</h1>
+                    <h2>HA GANADO: <span id="winner"></span></h2>
+                    <h2>TIEMPO DE JUEGO: <span id="totalTime"></span></h2>
+                    <button class="difficulty_buttons" id="reboot1">REINICIAR</button>
+                </div>
+
+                <div id="game_tab" class="game_tab displayShow">
+                    <div>
+                        <h2>Turno:</h2>
+                        <h2 id="turn">...</h2>
+                    </div>
+                    <div>
+                        <h2>Tiempo:</h2>
+                        <h2><span id="count">...</span> Secs.</h2>
+                    </div>
+                    <div>
+                        <button class="difficulty_buttons displayNone" id="reboot2">REINICIAR</button>
+                    </div>   
+                </div>
+    
+            </div>
+
+            <div class="control_section">
+                <h2>Controles</h2>
+                <img id="arrows" src="./assets/img/4 en linea/ARROWS.png" alt="arrows_control">
+                <img id="enter" src="./assets/img/4 en linea/ENTER.png" alt="enter_control">
+                <img id="esc" src="./assets/img/4 en linea/ESC.png" alt="esc_control">
+            </div>
+        </div>
+
+        <div id="images_videos">
+            <h2>Capturas y Videos</h2>
+            <div>
+                <img src="./assets/img/4 en linea/trampita.png" alt="capturas">
+            </div>
+        </div>
+
+        <div id="description">
+            <h2>Descripción</h2>
+            <p>
+                Conecta 4 es un juego de reflexión para niños y adultos que se dió a conocer
+                en 1974. El Conecta 4 se hizo popular muy rápido ya que las reglas del juego
+                son muy sencillas sin embargo  la estrategia  para ganar requiere experiencia
+                por parte de los jugadores. Es un excelente juego para hacer trabajar el 
+                cerebro de sus niños. De igual manera Conecta 4 se puede jugar en una hoja de 
+                papel con fichas redondas de diferentes colores, este juego le hace pasar el 
+                tiempo rápidamente si usted tiene un viaje largo o cursos aburridos. 
+                En papergame.io usted puede jugar a Conecta 4 con sus amigos o con miles de 
+                jugadores en el mundo entero. Lea nuestras estrategias de juego y sea el número uno!
+                El Conecta 4 se juega se juega de a dos jugadores sobre un tablero de siete 
+                columnas y seis filas. El objetivo es alinear cuatro fichas de un mismo jugador, 
+                horizontalmente, verticalmente o en diagonal. Las fichas tienen que ponerse 
+                en la linea inferior o sobre otra ficha.
+            </p>
+        </div>
+
+        <div id="reviews">
+            <h2>Reviews(1)</h2>
+
+            <div id="cards">
+                <div id="writter_card">
+                    <div id="user_section">
+                        <img src="./assets/img/4 en linea/user_img.png" alt="user_img">
+                        <h3>Tú</h3>
+                    </div>
+                    <div id="comment_section">
+                        <div>
+                            <h3>Escribe una Reseña:</h3>
+                            <img src="./assets/img/4 en linea/Stars.png" alt="stars">
+                        </div>
+                        <input type="text" name="" id="">
+                    </div>
+                </div>
+
+                <div id="users_cards">
+
+                    <div class="user_card">
+                        <div id="user_section">
+                            <img src="./assets/img/4 en linea/foto_1.png" alt="user_img">
+                            <h3>5/5</h3>
+                        </div>
+                        <div id="comment_section">
+                            <div class="name_stars">
+                                <h3>Alexelcapo</h3>
+                                <img src="./assets/img/4 en linea/Stars.png" alt="stars">
+                            </div>
+                            <p>Un Juego Muy entretenido. Pasé horas jugandolo. Denle un GOTY :3</p>
+                        </div>
+                    </div>
+
+                    <div class="user_card">
+                        <div id="user_section">
+                            <img src="./assets/img/4 en linea/foto_2.png" alt="user_img">
+                            <h3>2/5</h3>
+                        </div>
+                        <div id="comment_section">
+                            <div class="name_stars">
+                                <h3>LolitoUwU</h3>
+                                <img src="./assets/img/4 en linea/Stars.png" alt="stars">
+                            </div>
+                            <p>AYUDA EL JUEGO NO FUNCIONA EN MI COMPUTADORA!!!!</p>
+                        </div>
+                    </div>
+    
+                    <div class="user_card">
+                        <div id="user_section">
+                            <img src="./assets/img/4 en linea/foto_3.png" alt="user_img">
+                            <h3>4/5</h3>
+                        </div>
+                        <div id="comment_section">
+                            <div class="name_stars">
+                                <h3>XXLoquenderoXX</h3>
+                                <img src="./assets/img/4 en linea/Stars.png" alt="stars">
+                            </div>
+                            <p>tiene algunos bugs, pero está bueno</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </article>
+
+    <footer>
+        <div class="footer_div one">
+            <h3>redes sociales</h3>
+            <div>
+                <img src="./assets/img/Instagram_logo.png" alt="instagram">
+                <a href="">@Genu_oficial</a>
+            </div>
+            <div>
+                <img src="./assets/img/Facebook_logo.png" alt="facebook">
+                <a href="">Genu Games</a>
+            </div>
+            <div>
+                <img src="./assets/img/twitter_logo.png" alt="twitter">
+                <a href="">Genu</a>
+            </div>
+        </div>
+
+        <div class="footer_div one">
+            <h3>atajos rapidos</h3>
+            <div>
+                <a href="">FAQs</a>
+            </div>
+            <div>
+                <a href="">novedades</a>
+            </div>
+            <div>
+                <a href="">derechos de autor</a>
+            </div>
+        </div>
+
+        <div class="footer_div two">
+            <h3>newsletter</h3>
+            <p>recibe las ultimas novedades de la plataforma</p>
+            <form action="">
+                <input type="email" name="email" class="email_input" placeholder="Tu E-mail">
+                <input type="submit" value="envíar" class="email_submit">
+            </form>
+        </div>
+
+        <div class="three">
+            <a href="#logo">
+                <img src="./assets/img/Button_Up.png" alt="up" class="up_button">
+                <p class="up_text">ir arriba</p>
+            </a>
+        </div>
+    </footer>
+
+    <script src="js/header.js"></script>
+    <script src="./connect4/Token.js"></script>
+    <script src="./connect4/Box.js"></script>
+    <script src="./connect4/Player.js"></script>
+    <script src="./connect4/Board.js"></script>
+    <script src="./connect4/Game.js"></script>
+    <script src="./connect4/Main.js"></script>
+</body>
+</html>
