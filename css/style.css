@@ -2091,10 +2091,6 @@ h3 {
         margin: 5px;
         border-radius: 15px;
     }
-
-    .carrousel-container{
-        opacity: 0;
-    }
     
     .carrousel-container.galeria.visible {
         width: 98%;
