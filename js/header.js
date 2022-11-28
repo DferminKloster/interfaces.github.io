@@ -25,10 +25,35 @@ function animacionBarra(){
 }
 
 /*menu de hamburguesas*/ 
-btnMenu.addEventListener("click", () => {
-    desplegable.classList.toggle("menu-navbar-visible");
-    
-})
+btnMenu.addEventListener("click", showBarElements);
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+let toggle = false;
+async function showBarElements() {
+    if(!toggle) {
+        desplegable.classList.toggle("menu-navbar-visible");
+        let prueba = document.querySelectorAll(".navBarElement");
+        prueba.forEach(element => {
+            if(element.classList.contains("translateIn")) {
+                element.classList.remove("translateIn");
+                element.classList.add("translateOut");
+            }
+        });
+        for(let i = 0; i < prueba.length; i++) {
+            await sleep(500);
+            prueba[i].classList.remove("translateOut");
+            prueba[i].classList.toggle("translateIn");
+        }
+        toggle = true;
+    }
+    else {
+        desplegable.classList.toggle("menu-navbar-visible");
+        toggle = false;
+    }
+}
 
 window.addEventListener("scroll", function() {
     let actualpageYOffset  = window.pageYOffset;

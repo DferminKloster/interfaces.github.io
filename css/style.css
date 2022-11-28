@@ -133,7 +133,7 @@ h3 {
 
     header{
         display: flex;
-        position: sticky;
+        position: fixed;
         z-index: 5;
         justify-content: space-between;
         align-items: flex-start;
@@ -142,6 +142,44 @@ h3 {
         height: 50px;
         top: 0px;
         background: #070F2F;
+    }
+
+    #arrowHeader {
+        background-color: #070F2F;
+        padding: 5px;
+        border: #EC9409 solid 3px;
+        border-radius: 20px;
+        position: fixed;
+        z-index: 5;
+        top: 5px;
+        left: 45vw;
+        right: 45vw;
+        height: 30px;
+        width: 30px;
+    }
+    #arrowHeader img {
+        height: 30px;
+        width: 30px;
+    }
+    
+    .header_scroll_down {
+        transition: all .5s;
+        height: 5px;
+        border-bottom: solid #EC9409 3px;
+        
+    }
+    .header_scroll_up {
+        transition: all .5s;
+        height: 50px;
+    }
+
+    .invisible {
+        transition: all .5s ease-in-out;
+        opacity: 0%;
+    }
+    .visible {
+        transition: all .5s ease-in-out;
+        opacity: 100%;
     }
 
     section h2 {
@@ -1038,11 +1076,18 @@ h3 {
         padding: 8px;
         line-height: 1.5;
         transition: 0.2s;
-        transform: translateX(-100vw);
         position: absolute;
+        transform: translateX(-100vw);
         top: 60px;
-        visibility: hidden;
         z-index: 2;
+    }
+
+    .translateOut {
+        opacity: 0%;
+    }
+    .translateIn {
+        transition: opacity .2s ease-in-out;
+        opacity: 100%;
     }
 
     .menu-navbar ul:first-child img {
