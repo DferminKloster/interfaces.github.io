@@ -43,7 +43,7 @@ async function showBarElements() {
             }
         });
         for(let i = 0; i < prueba.length; i++) {
-            await sleep(500);
+            await sleep(300);
             prueba[i].classList.remove("translateOut");
             prueba[i].classList.toggle("translateIn");
         }
