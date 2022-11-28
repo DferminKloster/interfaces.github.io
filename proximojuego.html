@@ -8,7 +8,7 @@
     <title>Proximo lanzamiento</title>
 </head>
 <body>
-    <header>
+    <header id="header" class="header_scroll_up">
         <div class="logo" id="logo">
             <a href="index.html"><img src="assets/img/Logo.png" alt="Home"></a>
             <div class="barra_menu">
@@ -18,40 +18,43 @@
             </div>
 
             <div class="menu-navbar">
-                <h1>Genu!</h1>
+                <h1 class="navBarElement translateOut">Genu!</h1>
 
                 <div>
                     <ul>
-                        <li><a href="">Mi cuenta</a></li>
-                        <li><a href="">Favoritos</a></li>
-                        <li><a href="">Historial</a></li>
-                        <li><a href="">Amigos</a></li>
+                        <li class="navBarElement translateOut"><a href="">Mi cuenta</a></li>
+                        <li class="navBarElement translateOut"><a href="">Favoritos</a></li>
+                        <li class="navBarElement translateOut"><a href="">Historial</a></li>
+                        <li class="navBarElement translateOut"><a href="">Amigos</a></li>
                     </ul>
                 </div>
 
-                <div id="nav_bar_logout">
+                <div id="nav_bar_logout" class="navBarElement translateOut">
                     <img src="./assets/img/Configuration_Button.png" alt="configuration">
                     <button class="btnlougout">Log Out</button>
                 </div>
 
-                <div class="Socialmedia">
+                <div class="Socialmedia navBarElement translateOut">
                     <a href=""><img src="assets/img/Facebook_logo.png" alt=""></a>
                     <a href=""><img src="assets/img/Instagram_logo.png" alt=""></a>
                     <a href=""> <img src="assets/img/twitter_logo.png" alt=""> </a>
                 </div>
             </div>
         </div>
-        <div class="nav">
+        <div class="nav" id="nav">
             <input type="text" placeholder="Buscar">
             <img src="./assets/img/Lupa.png" alt="buscar">  
         </div>
-        <nav class="perfil">
+        <div class="perfil" id="perfil">
             <button><a href="" class="nav-anchor">Try Premium</a></button>
             <img src="./assets/img/User Icon.png" alt="User Menu">                                
-        </nav>  
+        </div>  
     </header>
+    <div id="arrowHeader" class="invisible">
+        <img src="./assets/img/arrowHeader.png" alt="">
+    </div>
 
-    <section>
+    <section class="slider">
         <div class="CS-img">
             <img class="BG" src="assets/img/overwatch2/background.png">
             <img class="mercy" src="assets/img/overwatch2/Mercy.png">
@@ -62,9 +65,9 @@
         <div class="texto-juego-coming-soon">
             <h2 class="texto">COMING SOON</h2>
             <h1 class="texto">42D : 13H : 53M : 05S</h1>
-            <div>
+            <!--<div>
                 <button class="btnp btn--2">Reservar</button>
-            </div>
+            </div>-->
         </div>
     </section>
 
@@ -128,7 +131,7 @@
           </div>
         </div>
     </div>
-    <section class=" personajes ">
+    <section class="personajes">
         <div class="CS-PCard">
             <div class="CS-PCard-img">
                 <img src="assets/img/overwatch2/usados/doomfist.webp" alt="">
@@ -370,6 +373,7 @@
             </div>
         </div>
     </section>
+    <div class="ryu"></div>
     <footer>
         <div class="footer_div one">
             <h3>redes sociales</h3>
@@ -416,7 +420,8 @@
             </a>
         </div>
     </footer>
-    <script src="js/script.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/header.js"></script>
 </body>
 </html>
 
